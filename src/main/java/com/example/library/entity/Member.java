@@ -9,6 +9,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "member")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,6 +30,7 @@ public class Member {
     private String email;
 
     @NotNull
-    @Column(nullable = false)
+    @Column(name = "membership_date", nullable = false)
     private LocalDate membershipDate;
 }
+

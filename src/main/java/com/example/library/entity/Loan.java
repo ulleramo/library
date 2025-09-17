@@ -7,6 +7,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "loan")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,9 +29,10 @@ public class Loan {
     private Member member;
 
     @NotNull
-    @Column(nullable = false)
+    @Column(name = "loan_date", nullable = false)
     private LocalDate loanDate;
 
+    @Column(name = "return_date")
     private LocalDate returnDate; // null = still borrowed
 }
 
